@@ -53,6 +53,8 @@ next-env.d.ts
 # Hardhat compilation (v2) support directory
 /cache
 
+types/ethers-contracts
+
 # Typechain output
 # /types
 
