@@ -4,14 +4,13 @@ import { ethers } from "ethers";
 import SimplePollABI from "../artifacts/contracts/SimplePoll.sol/SimplePoll.json";
 
 declare global {
-    var window: any;
     interface Window {
         ethereum?: any;
     }
 }
 
 // Paste your deployed address here:
-const CONTRACT_ADDRESS = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+const CONTRACT_ADDRESS = "0xee2DD75E55B517e935143b59eD23819967D717CC";
 
 export const useWeb3Poll = () => {
     const [currentAccount, setCurrentAccount] = useState<string | null>(null);
