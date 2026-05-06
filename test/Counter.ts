@@ -1,5 +1,6 @@
 import { expect } from "chai";
 import { network } from "hardhat";
+import type { EventLog } from "ethers";
 
 const { ethers } = await network.create();
 
@@ -28,7 +29,9 @@ describe("Counter", function () {
     // check that the aggregated events match the current value
     let total = 0n;
     for (const event of events) {
-      total += event.args.by;
+      if ("args" in event) {
+        total += (event as EventLog).args.by as bigint;
+      }
     }
 
     expect(await counter.x()).to.equal(total);

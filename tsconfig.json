@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
     "lib": [
+      "dom",
+      "dom.iterable",
       "es2023"
     ],
-    "module": "node16",
+    "module": "esnext",
     "target": "es2022",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node16",
-    "types": ["mocha", "chai-as-promised"],
+    "moduleResolution": "bundler",
+    "types": ["node", "mocha", "chai-as-promised"],
     "outDir": "dist",
     "allowJs": true,
     "noEmit": true,
@@ -24,8 +26,11 @@
     ]
   },
   "include": [
+    "app/**/*",
+    "hooks/**/*",
     "src/**/*",
     "test/**/*",
+    "scripts/**/*",
     "hardhat.config.ts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
