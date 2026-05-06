@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node16",
+    "types": ["mocha", "chai-as-promised"],
     "outDir": "dist",
     "allowJs": true,
     "noEmit": true,
@@ -24,6 +25,7 @@
   },
   "include": [
     "src/**/*",
+    "test/**/*",
     "hardhat.config.ts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
